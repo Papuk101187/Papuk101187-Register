@@ -5,7 +5,7 @@ public interface MainUserRepositoryInterface<User,String>  {
 
 
 
- //public void addUser(User user);
+ public void addUser(User user);
 
 
 

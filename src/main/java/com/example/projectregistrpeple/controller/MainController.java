@@ -25,7 +25,7 @@ public class MainController {
 
     @GetMapping("")
     public String startMenu() {
-        return "test";
+        return "modelstart";
     }
 
     @GetMapping("/main")
