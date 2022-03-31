@@ -1,11 +1,9 @@
 package com.example.projectregistrpeple.controller;
 
 
-import com.example.projectregistrpeple.domain.User;
+import com.example.projectregistrpeple.domain.users.TypeUser;
 import com.example.projectregistrpeple.dto.ResponseUser;
-import com.example.projectregistrpeple.patterns.FactoryUsers;
 import com.example.projectregistrpeple.service.userservice.UserServiceInterface;
-import com.example.projectregistrpeple.service.verifications.VerificationResponseClass;
 import com.example.projectregistrpeple.service.verifications.VerificationResponseInterface;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -32,14 +30,12 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/registration") // API добавить пользователя
-    public String test(ResponseUser responseUser, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
+    public String test(ResponseUser responseUser) {
 
-        boolean check = verificationResponse.check(date);
-
-        if(verificationResponse.check(date)==false) return "test";
+        //boolean check = verificationResponse.check(responseUser); // надо доделать проверку тут
 
 
-        userService.AddUser(responseUser,date);
+        userService.AddUser(responseUser);
 
 
         return "test";

@@ -10,5 +10,5 @@ import java.util.Date;
 public interface VerificationResponseInterface {
 
 
-    boolean check(Date date);
+    boolean check(ResponseUser responseUser);
 }

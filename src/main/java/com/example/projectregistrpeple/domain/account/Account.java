@@ -1,4 +1,4 @@
-package com.example.projectregistrpeple.domain;
+package com.example.projectregistrpeple.domain.account;
 
 public class Account {
 

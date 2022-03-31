@@ -1,11 +1,13 @@
 package com.example.projectregistrpeple.repository.userrepository;
 
 
-public interface MainUserRepositoryInterface<User,String>  {
+
+public interface MainUserRepositoryInterface<Users,String>  {
 
 
 
- public void addUser(User user);
+
+
 
 
 

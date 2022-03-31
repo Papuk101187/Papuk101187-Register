@@ -16,6 +16,7 @@ public class ResponseUser {
     String username;
     String surname;
     String patronymic;
+    String type;
 
 
 
