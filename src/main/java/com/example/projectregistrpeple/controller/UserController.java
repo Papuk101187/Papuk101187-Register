@@ -3,6 +3,7 @@ package com.example.projectregistrpeple.controller;
 
 import com.example.projectregistrpeple.domain.User;
 import com.example.projectregistrpeple.dto.ResponseUser;
+import com.example.projectregistrpeple.patterns.FactoryUsers;
 import com.example.projectregistrpeple.service.userservice.UserServiceInterface;
 import com.example.projectregistrpeple.service.verifications.VerificationResponseClass;
 import com.example.projectregistrpeple.service.verifications.VerificationResponseInterface;
@@ -25,19 +26,23 @@ public class UserController {
 
     @Autowired
     VerificationResponseInterface verificationResponse;
-    VerificationResponseClass userServiceInterface;
+
+    @Autowired
+    UserServiceInterface userService;
 
     @ResponseBody
     @PostMapping("/registration") // API добавить пользователя
     public String test(ResponseUser responseUser, @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
 
         boolean check = verificationResponse.check(date);
-        System.out.println("check date "+check);
 
+        if(verificationResponse.check(date)==false) return "test";
+
+
+        userService.AddUser(responseUser,date);
 
 
         return "test";
-
 
     }
 
