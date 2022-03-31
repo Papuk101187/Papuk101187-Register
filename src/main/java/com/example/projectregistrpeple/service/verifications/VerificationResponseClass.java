@@ -1,8 +1,7 @@
 package com.example.projectregistrpeple.service.verifications;
 
 
-import com.example.projectregistrpeple.domain.User;
-import com.example.projectregistrpeple.dto.ResponseUser;
+
 import com.example.projectregistrpeple.exception.WrongDataException;
 import org.springframework.stereotype.Service;
 
@@ -39,11 +38,10 @@ public class VerificationResponseClass implements VerificationResponseInterface 
 
         } else {
             try {
-                throw new WrongDataException("arguments of f() are null");
+                throw new WrongDataException(" arguments of f() are null ");
             } catch (WrongDataException e) {
                 e.printStackTrace();
             }
-
         }
 
 
