@@ -9,6 +9,8 @@ import lombok.experimental.Accessors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 @Service
 @Accessors(chain = true)
@@ -34,9 +36,10 @@ public class UserService implements UserServiceInterface {
 
     }
 
-    @Override
-    public Users findByName(String username) {
-      return repositoryInterfaceJPA.findByName(username);
+    public Optional<Users> findByUsers(ResponseUser users){
+
+        return repositoryInterface.findByUsers(users);
+
     }
 
 

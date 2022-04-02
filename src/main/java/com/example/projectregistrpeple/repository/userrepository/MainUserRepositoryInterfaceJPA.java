@@ -9,6 +9,8 @@ public interface MainUserRepositoryInterfaceJPA extends JpaRepository<Users,Stri
 
 
 
-    Users findByName(String nameUse);
+
+
+
 
 }

@@ -4,13 +4,7 @@
 <@c.page>
 
     <@l.login "/registration" />
-
-
     <br>
     ${message}
-
-
-
-
 
 </@c.page>
