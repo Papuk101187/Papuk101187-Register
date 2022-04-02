@@ -10,13 +10,14 @@ import java.util.Date;
 
 @Accessors
 @Data
-
 public class ResponseUser {
 
     String username;
     String surname;
     String patronymic;
     String type;
+    String customer;
+    String seller;
 
 
 
